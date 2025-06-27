@@ -128,5 +128,99 @@ document.querySelectorAll('.accordion-item').forEach(item => {
     transition: 'cubic-bezier(0,0,0,1)'
   });
   
+
+
+  document.querySelectorAll('.has-megamenu').forEach(item => {
+    const megamenu = item.querySelector('.megamenu');
+
+    gsap.set(megamenu, {
+      autoAlpha: 0,
+      y: -20,
+      display: 'none',
+      pointerEvents: 'none'
+    });
+
+    let showTween, hideTween;
+
+    item.addEventListener('mouseenter', () => {
+      if (hideTween) hideTween.kill();
+
+      gsap.set(megamenu, { display: 'block', pointerEvents: 'auto' });
+      showTween = gsap.to(megamenu, {
+        duration: 0.4,
+        autoAlpha: 1,
+        y: 0,
+        ease: 'power2.out'
+      });
+    });
+
+    item.addEventListener('mouseleave', () => {
+      if (showTween) showTween.kill();
+
+      hideTween = gsap.to(megamenu, {
+        duration: 0.3,
+        autoAlpha: 0,
+        y: -20,
+        ease: 'power2.in',
+        onComplete: () => {
+          gsap.set(megamenu, { display: 'none', pointerEvents: 'none' });
+        }
+      });
+    });
+  });
+
+  const stickyBar = document.getElementById("sticky-bar");
+  const header = document.getElementById("site-header");
+  let lastScrollY = window.scrollY;
   
+  window.addEventListener("scroll", () => {
+    const currentY = window.scrollY;
+  
+    if (currentY > 300) {
+      stickyBar.classList.add("fixed");
+    } else {
+      stickyBar.classList.remove("fixed");
+    }
+  
+    lastScrollY = currentY;
+  });
+  
+  window.addEventListener("scroll", () => {
+    const currentY = window.scrollY;
+  
+    // Меняем фиксированное меню
+    if (currentY > 300) {
+      stickyBar.classList.add("fixed");
+    } else {
+      stickyBar.classList.remove("fixed");
+    }
+  
+    // Добавляем класс .at-top на body, если наверху
+    if (currentY < 50) {
+      document.body.classList.add("at-top");
+    } else {
+      document.body.classList.remove("at-top");
+    }
+  
+    lastScrollY = currentY;
+  });
+
+    const video = document.getElementById('myVideo');
+    const playBtn = document.querySelector('.video-play');
+    const playIcon = playBtn.querySelector('.fa-play');
+    const pauseIcon = playBtn.querySelector('.fa-pause');
+
+    playBtn.addEventListener('click', () => {
+    if (video.paused) {
+        video.play();
+        playIcon.classList.add('hide');
+        pauseIcon.classList.remove('hide');
+    } else {
+        video.pause();
+        playIcon.classList.remove('hide');
+        pauseIcon.classList.add('hide');
+    }
+    });
+
+
 });

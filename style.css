@@ -71,8 +71,8 @@ header {
     z-index: 20;
     font-family: var(--main-font);
     align-items: center;
-    background: #000;
-    position: static !important;
+    background: transparent;
+    position: absolute;
 }
 header .menu {
     display: flex;
@@ -93,7 +93,7 @@ header .menu li a {
     padding-bottom: 1px;
 }
 header .menu li a:hover {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #fff;
 }
 header .top-header img {
     width: 100px;   
@@ -103,7 +103,7 @@ header .top-header img {
     max-width: 1300px;
     margin: 0 auto;
     align-items: center;
-    position: static !important; 
+
 }
 #logo {
     font-family: Anton, sans-serif;
@@ -150,7 +150,90 @@ header .top-header img {
     position: relative;
     display: inline-block;
   }
+  .megamenu {
+    background-color: rgba(0, 0, 0, 0.85);
+    transition: background-color 0.3s ease;
+  }
+  .megamenu-item img {
+    display: block;
+  max-width: 100%;
+  border-radius: 4px;
+  }
   
+  body.at-top .megamenu {
+    background-color: rgba(0, 0, 0, 0); /* плотный фон */
+
+  padding: 40px;
+  transition: background-color 0.3s ease;
+  }
+  .perspective {
+    perspective: 1000px;
+  }
+  
+  .flip-link {
+    display: inline-block;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease;
+    border-bottom: 1px solid transparent;
+  }
+  
+  .group:hover .flip-link {
+    transform: rotateX(360deg);
+    border-bottom: 1px solid #fff;
+  }
+  .megamenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    background: #000;
+    color: #fff;
+    padding: 40px;
+    display: none;
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    z-index: 1000;
+  }
+.at-top .megamenu {
+    background: transparent;
+}
+  #sticky-bar {
+    transition: all 0.3s ease;
+    padding: 20px 0;
+  }
+  
+  #sticky-bar.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #000;
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: unset !important;
+  }
+  
+  .megamenu-content {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .megamenu-item {
+    width: 45%;
+  }
+  
+  .megamenu-item img {
+    max-width: 100%;
+    margin-bottom: 10px;
+    box-shadow: -2px 2px 68px -8px rgba(0,0,0,0.54);
+-webkit-box-shadow: -2px 2px 68px -8px rgba(0,0,0,0.54);
+-moz-box-shadow: -2px 2px 68px -8px rgba(0,0,0,0.54);
+  }
 
   .logo-text::before {
     content: "";
@@ -692,12 +775,10 @@ header .top-header img {
     transition-duration: .5s;
 }
 .pros-wrapper .pros-content article:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: #000;
 }
 .pros-wrapper .pros-content article:hover a {
-    color: #000;
-    border-bottom: 1px solid #000;
+    color: #fff;
 }
 .pros-wrapper .pros-content article p {
     font-family:  'Neue Montreal', serif;
