@@ -1,10 +1,23 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-// === LOCOMOTIVE SCROLL ===
-/* const scroll = new LocomotiveScroll({
-  el: document.querySelector('[data-scroll-container]'),
-  smooth: true
-});  */
+    window.addEventListener('load', () => {
+  ScrollTrigger.refresh();
+});
+
+  window.addEventListener('load', () => {
+
+    document.body.style.visibility = 'visible';
+
+
+    gsap.to('#page-transition', {
+      duration: 0.8,
+      opacity: 0,
+      ease: 'power2.out',
+      onComplete: () => {
+        document.getElementById('page-transition').style.display = 'none';
+      }
+    });
+  });
 
     gsap.registerPlugin(ScrollTrigger);
 
@@ -60,13 +73,12 @@ document.querySelectorAll('.accordion-item').forEach(item => {
     const header = item.querySelector('.accordion-header');
     const body = item.querySelector('.accordion-body');
   
-    // Изначально скрываем
     gsap.set(body, { height: 0, opacity: 0, display: 'none', paddingTop: 0, paddingBottom: 0 });
   
     header.addEventListener('click', () => {
       const isOpen = item.classList.contains('active');
   
-      // Закрываем все остальные
+
       document.querySelectorAll('.accordion-item').forEach(otherItem => {
         if (otherItem !== item) {
           const otherBody = otherItem.querySelector('.accordion-body');
@@ -87,10 +99,10 @@ document.querySelectorAll('.accordion-item').forEach(item => {
         item.classList.add('active');
         gsap.set(body, { display: 'block' });
   
-        // Получаем высоту контента
+
         body.style.height = 'auto';
         const fullHeight = body.scrollHeight;
-        gsap.set(body, { height: 0 }); // сбросим перед анимацией
+        gsap.set(body, { height: 0 }); 
   
         gsap.to(body, {
           height: fullHeight,
@@ -100,7 +112,7 @@ document.querySelectorAll('.accordion-item').forEach(item => {
           duration: 0.5,
           ease: 'power2.out',
           onComplete: () => {
-            body.style.height = 'auto'; // фиксируем для стабильности
+            body.style.height = 'auto'; 
           }
         });
       } else {
@@ -185,7 +197,7 @@ document.querySelectorAll('.accordion-item').forEach(item => {
     lastScrollY = currentY;
   });
   
-  window.addEventListener("scroll", () => {
+/*   window.addEventListener("scroll", () => {
     const currentY = window.scrollY;
   
     // Меняем фиксированное меню
@@ -196,16 +208,17 @@ document.querySelectorAll('.accordion-item').forEach(item => {
     }
   
     // Добавляем класс .at-top на body, если наверху
+    const bodyMain = document.querySelector('body.main');
     if (currentY < 50) {
-      document.body.classList.add("at-top");
+      bodyMain.classList.add("at-top");
     } else {
-      document.body.classList.remove("at-top");
+      bodyMain.classList.remove("at-top");
     }
   
     lastScrollY = currentY;
-  });
+  }); */
 
-    const video = document.getElementById('myVideo');
+/*     const video = document.getElementById('myVideo');
     const playBtn = document.querySelector('.video-play');
     const playIcon = playBtn.querySelector('.fa-play');
     const pauseIcon = playBtn.querySelector('.fa-pause');
@@ -220,7 +233,45 @@ document.querySelectorAll('.accordion-item').forEach(item => {
         playIcon.classList.remove('hide');
         pauseIcon.classList.add('hide');
     }
-    });
+    }); */
+
+    document.querySelectorAll('a[href]').forEach(link => {
+        const url = link.getAttribute('href');
+      
+        if (!url || url.startsWith('#') || url.startsWith('http')) return;
+      
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          gsap.set('#page-transition', { display: 'block', pointerEvents: 'auto' });
+      
+          gsap.to('#page-transition', {
+            opacity: 1,
+            duration: 0.6,
+            ease: 'power2.inOut',
+            onComplete: () => {
+              window.location.href = url;
+            }
+          });
+        });
+      });
+
+    /*var elem = document.querySelector('.grid');
+        var msnry = new Masonry( elem, {
+        // options
+        itemSelector: '.grid-item',
+        columnWidth: 300,
+        gutter: 10
+        });
+
+        // element argument can be a selector string
+        //   for an individual element
+        var msnry = new Masonry( '.grid', {
+         gutter: 5
+        }); */
+
+   
+  
+  
 
 
 });
