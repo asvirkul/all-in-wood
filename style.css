@@ -1571,3 +1571,116 @@ body.add header {
 
 
 /* Gallery Single */
+
+/* Resources */
+.resources-wrapper {
+  background-color: #000;
+  color: #fff;
+  padding-top: 150px;
+}
+.resources-title {
+  color: #fff;
+  text-align: center;
+  max-width: 800px;
+  padding-top: 50px;
+
+  margin: 0 auto;
+}
+.resources-title h2 {
+  font-family: 'Great Vibes';
+  font-size: 45px;
+  padding-bottom: 20px;
+}
+.resources-title p {
+  font-family: 'Neue Montreal Bold';
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 26px;
+}
+.resources-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  max-width: 1400px;
+  flex-wrap: wrap;
+  margin-top: 40px !important;
+  margin:  0 auto;
+}
+.resources-content article {
+  width: 48%;
+  border: 1px solid #333333;
+  color: #fff;
+  padding: 50px 20px;
+  padding-bottom: 20px !important;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  transition: all;
+  transition-duration: .5s;
+  position: relative;
+}
+.resources-content article:hover {
+  background-color: #fff;
+  color: #000;
+}
+.resources-content article img {
+  position: absolute;
+  right: 90px;
+  width: 150px;
+  bottom: 10px;
+  z-index: 20;
+  display: none;
+}
+.resources-content article div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+} 
+ svg.animated {
+  right: 50px;
+  bottom: -10px;
+  width: 200px !important;
+  height: 140px !important;
+  margin-top: -20px;
+}
+#freepik_stories-qa-engineers {
+  padding: 20px 0;
+}
+.resources-content article:hover a {
+  color: #000;
+}
+.resources-content article:hover svg {
+  background-color: transparent;
+  color: #000;
+}
+.resources-content article svg:not(.animated) {
+  margin-top: 20px;
+  border: 1px solid #333333;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all;
+  transition-duration: .5s;
+}
+
+.resources-content > article:nth-child(3) {
+  width: 60%;
+} 
+.resources-content > article:nth-child(4) {
+  width: 38%;
+}
+.resources-content article h2 {
+  font-family: 'Neue Montreal Bold';
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 26px;
+}
+.resources-content article p {
+  font-family: 'Neue Montreal';
+  line-height: 30px;
+}
+.resources-content article a {
+  color: #fff;
+  text-decoration: none;
+}
+/* Resources */
