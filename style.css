@@ -1,27 +1,27 @@
 @font-face {
     font-family: 'Neue Montreal';
-    src: url('/fonts/NeueMontreal-Regular.woff') format('woff');
+    src: url('./fonts/NeueMontreal-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Aktiv Grotesk';
-    src: url('/fonts/AktivGrotesk-Regular.ttf') format('truetype');
+    src: url('./fonts/AktivGrotesk-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Neue Montreal Bold';
-    src: url('/fonts/NeueMontreal-Bold.woff') format('woff');
+    src: url('./fonts/NeueMontreal-Bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Neue Montreal Thin';
-    src: url('/fonts/NeueMontreal-Light.ttf') format('woff');
+    src: url('./fonts/NeueMontreal-Light.ttf') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
