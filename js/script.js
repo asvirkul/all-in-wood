@@ -153,6 +153,24 @@ document.querySelectorAll('.accordion-item').forEach(item => {
       }
     });
   });
+
+  const showcaseSection = document.querySelector('.showcase-wrapper');
+const megamenus = document.querySelectorAll('.megamenu');
+
+function updateMegamenuBackground() {
+  const scrollY = window.scrollY;
+  const triggerY = showcaseSection.offsetTop + showcaseSection.offsetHeight;
+
+  if (scrollY > triggerY) {
+    megamenus.forEach(menu => menu.classList.add('dark-bg'));
+  } else {
+    megamenus.forEach(menu => menu.classList.remove('dark-bg'));
+  }
+}
+
+window.addEventListener('scroll', updateMegamenuBackground);
+window.addEventListener('load', updateMegamenuBackground);
+
   
   const images = document.querySelectorAll('.parallax-img');
   new simpleParallax(images, {

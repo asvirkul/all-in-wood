@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
     <title>Document</title>
 </head>
@@ -45,7 +47,7 @@
                     <li class="group perspective menu-item"><a href="#" class="flip-link">find a dealer</a></li>
                     <li class="group perspective menu-item"><a href="#" class="flip-link">collections</a></li>
                     
-                    <li class="group perspective menu-item"><a href="#" class="flip-link">contact</a></li>
+                    <li class="group perspective menu-item"><a href="contact.html" class="flip-link">contact</a></li>
                     <li class="menu-item has-megamenu">
                         <a href="#" class="flip-link">Design Services</a>
                     
@@ -70,68 +72,68 @@
     </header>
     <!-- Header -->
 
-    <!-- Single Gallery -->
-    <section class="single-gallery-wrapper">
-        <div class="single-gallery-content">
-            <div class="single-gallery-info">
-
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere incidunt iusto modi veniam ea! Nesciunt sapiente atque ipsa autem corporis!</p>
-                    <div class="info-img-wrapper">
-                        <div class="info-img">
-                            <a href="#">
-                              <img src="images/house.jpg" alt="">  
-                            </a>
-                            
-                        </div>
-                        <div class="info-img">
-                            <a href="#">
-                              <img src="images/house.jpg" alt="">  
-                            </a>
-                        </div>
-                        <div class="info-img">
-                             <a href="#">
-                              <img src="images/house.jpg" alt="">  
-                            </a>
-                        </div>
-                    </div>
+    <!-- Contacts -->
+    <section class="contact-wrapper">
+        <div class="contact-title">
+            <div class="contact-img">
+                <img src="images/contact-back.jpg" class="parallax-img" alt="">
             </div>
-           <div class="single-gallery-current">
-                <img src="images/footer-back.png" alt="" />
-            </div>
-
-            <div class="single-gallery-description">
-                    <div>
-                        <h2>Black Wood Collection</h2>
-                        <span>Fairmont Collection, Black</span>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde fugiat harum magnam suscipit aliquam dolores!</p>
-                        
-                    </div>
-            </div>
-        </div>
-        <div class="slider-img-wrapper">        
-            <div class="single-gallery-slider-img"></div>
-            <div class="single-gallery-slider-wrapper">
-                <div class="single-gallery-name">
-                    <h2>greyheron blazdress</h2>
-                </div>
-                <div class="single-gallery-slider">
-                    <div class="img-slider">
-                        <img src="images/house.jpg" alt="">
-                    </div>
-                    <div class="img-slider">
-                        <img src="images/house.jpg" alt="">
-                    </div>
-                    <div class="img-slider">
-                        <img src="images/house.jpg" alt="">
-                    </div>
-                    <div class="img-slider">
-                        <img src="images/house.jpg" alt="">
-                    </div>
-                </div>
+            <div class="contact-title-text">
+                <h2>Get in touch</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia vitae minima quo ullam, aliquid velit corrupti odit amet facere minus.</p>
             </div>
         </div>
     </section>
-    <!-- Single Gallery -->
+    <!-- Contacts -->
+
+    <!-- Contact Form -->
+    <section class="contact-form">
+        <div class="contact-form-content">
+            <form>
+                <div><input placeholder="Your Name" type="text" name="contact-name"></div>
+                <div><input placeholder="Your email" type="email" name="contact-email"></div>
+                <div><input type="text" name="contact-address" placeholder="Your Address"></div>
+                <div><input type="tel" name="contact-phone" placeholder="Your Phone Number"></div>  
+                <div><textarea name="contact-message" placeholder="Your Message"></textarea></div>
+                <div><button type="submit" class="submit-contact"><span class="btn-text">Send</span> <svg  xmlns="http://www.w3.org/2000/svg"  width="28"  height="28"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 7l-10 10" /><path d="M8 7l9 0l0 9" /></svg> </button></div>
+                <div class="form-text">
+                    <h2>send us a message </h2>
+                    <p>feel free to write us and ask any question you have</p>
+                </div>
+            </form>
+            <div class="contact-form-img">
+                <img src="images/contact-img.jpg" alt="">
+            </div>
+        </div>
+        
+    </section>
+    <!-- Contact Form -->
+
+    <!-- Map -->
+    <section class="address-wrapper">
+        <div class="address-title">
+            <h2>Find our location on the map</h2>
+        </div>
+        <div class="address-content">
+            <div class="address-info">
+                <h2>Phone Number</h2>
+                <div>
+                    <p><a href="tel:+38061123123">+61234567899</a></p>
+                    <a href="tel:+38061123123">+61234567899</a>
+                </div>
+                <h2>Address</h2>
+                <div>
+                    <a href="#">All In Wood Office, USA</a>
+                    <a href="#">All In Wood Office, USA</a>
+                </div>
+            </div>
+            <div class="map-wrapper">
+                <div id="map"></div>
+            </div>
+        </div>        
+    </section>
+    <!-- Map -->
+    
 
     <!-- Footer -->
         <footer>
@@ -177,6 +179,7 @@
     <!-- animation -->
     <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="https://unpkg.com/simple-parallax-js@5.6.2/dist/simpleParallax.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -184,7 +187,7 @@
     <script src="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
     <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
  <!-- js -->
- <script src="js/singleGallery.js"></script>
+ <script src="js/contact.js"></script>
 
 </body>
 </html>

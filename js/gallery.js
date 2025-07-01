@@ -20,23 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        const showcaseSection = document.querySelector('.showcase-wrapper');
-      const megamenus = document.querySelectorAll('.megamenu');
-
-      function updateMegamenuBackground() {
-        const scrollY = window.scrollY;
-        const triggerY = showcaseSection.offsetTop + showcaseSection.offsetHeight;
-
-        if (scrollY > triggerY) {
-          megamenus.forEach(menu => menu.classList.add('dark-bg'));
-        } else {
-          megamenus.forEach(menu => menu.classList.remove('dark-bg'));
-        }
-      }
-
-      window.addEventListener('scroll', updateMegamenuBackground);
-      window.addEventListener('load', updateMegamenuBackground);
-
+        
 
         var elem = document.querySelector('.grid');
         var msnry = new Masonry( elem, {

@@ -165,6 +165,10 @@ header .top-header img {
     z-index: 999;
   }
   .megamenu.dark-bg {
+  background-color: black;
+}
+
+  .megamenu.dark-bg {
   background-color: black !important;
 }
 
@@ -1688,3 +1692,251 @@ body.add header {
 }
 
 /* Resources */
+
+/* Contact */
+.contact-wrapper {
+  background: #000;
+}
+.contact-wrapper img {
+  width: 100%;
+}
+.contact-wrapper .contact-title {
+  color: #fff;
+}
+.contact-title-text {
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+.contact-title-text p {
+  width: 40%;
+  font-family: 'Neue Montreal Bold';
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 25px;
+}
+.contact-form {
+  background-color: #000;
+  padding-top: 100px;
+}
+.contact-form-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-bottom: 100px;
+}
+.contact-form-content form {
+  width: 45%;
+  box-sizing: border-box;
+}
+.contact-form-content form input:not(.submit-contact), .contact-form-content form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: transparent;
+  resize: vertical;
+  border: none;
+  border-bottom: 1px solid #333333;
+  outline: none;
+  font-family: 'Neue Montreal';
+  text-transform: capitalize;
+  color: #fff;
+  font-size: 16px;
+  padding: 25px 10px;
+  transition: all;
+  transition-duration: .5s;
+}
+.contact-form-content form h2 {
+  font-family: 'Neue Montreal';
+  color: #333333;
+  text-transform: uppercase;
+  padding: 0 10px;
+  font-size: 17px;
+}
+.contact-form-content input {
+  transition: all 0.3s ease;
+}
+
+.contact-form-content input:focus, .contact-form-content textarea:focus {
+  transform: scale(1.02);
+}
+.contact-form-img img {
+  animation: levitate 4s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes levitate {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.form-text {
+  max-width: 1200px;
+  text-align: center;
+  margin-top: 20px !important;
+  margin: 0 auto;
+}
+form button svg {
+  transition: transform 0.3s ease;
+}
+
+form button:hover svg {
+  transform: translateX(5px);
+}
+
+.form-text h2 {
+  font-family: 'Neue Montreal' !important;
+  font-size: 50px !important;
+  color: #fff !important;
+  display: inline-block;
+  padding-left: unset !important;
+  text-transform: uppercase;
+}
+.form-text p {
+  color: #fff;
+  font-family: 'Neue Montreal';
+  margin-top: 20px;
+  text-transform: uppercase;
+  
+}
+.contact-form-content form button {
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #fff;
+  padding: 15px 10px;
+  width: 100%;
+  justify-content: center;
+  transition: all;
+  transition-duration: .5s;
+  background-color: transparent;
+  align-items: center;
+  color: #fff;
+  font-family: 'Neue Montreal';
+  outline: none;
+}
+.contact-form-content form button .btn-text {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  transition: all 0.4s ease;
+}
+
+.contact-form-content form button .btn-text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background: #fff;
+  transition: transform 0.4s ease;
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.contact-form-content form button:hover .btn-text::after {
+  transform: scaleX(0);
+}
+.contact-form-content form button svg {
+  margin-left: 5px;
+}
+.contact-form-content form textarea {
+  box-sizing: border-box;
+  width: 100%;
+}
+.contact-form-img {
+  width: 40%;
+}
+.contact-form-img img {
+  width: 100%;
+}
+.contact-title h2 {
+  font-family: 'Great Vibes';
+  font-size: 110px;
+  text-transform: capitalize;
+  margin: 40px 0;
+  background: linear-gradient(to bottom, #777, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  padding: 20px;
+}
+#map {
+      width: 100%;
+      height: 300px;
+}
+.address-wrapper {
+  background-color: #000;
+  color: #fff;
+
+}
+.address-wrapper .map-wrapper {
+  width: 70%;
+}
+.address-info {
+  width: 25%;
+}
+.address-info a {
+  font-family: 'Neue Montreal';
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #fff;
+  display: inline-block;
+}
+.address-info div:first-of-type {
+  margin-bottom: 20px;
+}
+.address-info div:last-of-type a  {
+    font-family: 'Neue Montreal';
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  border-bottom: unset;
+  display: inline-block;
+}
+.address-info h2 {
+  font-family: 'Neue Montreal Bold';
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.address-title {
+  max-width: 70%;
+  margin: 0 auto;
+  font-family: 'Neue Montreal Bold';
+  text-transform: uppercase;
+  background: linear-gradient(to bottom, #777, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-size: 40px;
+  margin-bottom: 40px;
+  text-align: right;
+}
+.address-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+/* Contact */
