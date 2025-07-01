@@ -68,6 +68,28 @@ const swiperLeft = new Swiper('.swiper-left', {
     },
   });
 
+  window.addEventListener('DOMContentLoaded', () => {
+    const showcaseSection = document.querySelector('.showcase-wrapper');
+    const megamenus = document.querySelectorAll('.megamenu');
+
+    if (!showcaseSection || megamenus.length === 0) return;
+
+    function updateMegamenuBackground() {
+      const scrollY = window.scrollY;
+      const triggerY = showcaseSection.offsetTop + showcaseSection.offsetHeight;
+
+      if (scrollY > triggerY) {
+        megamenus.forEach(menu => menu.classList.add('dark-bg'));
+      } else {
+        megamenus.forEach(menu => menu.classList.remove('dark-bg'));
+      }
+    }
+
+    window.addEventListener('scroll', updateMegamenuBackground);
+    window.addEventListener('load', updateMegamenuBackground);
+  });
+
+
 // ===ACCORDION===
 document.querySelectorAll('.accordion-item').forEach(item => {
     const header = item.querySelector('.accordion-header');

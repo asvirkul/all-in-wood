@@ -164,6 +164,10 @@ header .top-header img {
     transition: background-color 0.3s ease;
     z-index: 999;
   }
+  .megamenu.dark-bg {
+  background-color: black !important;
+}
+
   .megamenu-item img {
     display: block;
     max-width: 100%;
@@ -393,7 +397,6 @@ header .top-header img {
     color: transparent;
     -webkit-text-stroke: 1px white;
     background: inherit;
-    -webkit-background-clip: text;
     mix-blend-mode: exclusion; 
     opacity: 1;
   }
@@ -1683,4 +1686,5 @@ body.add header {
   color: #fff;
   text-decoration: none;
 }
+
 /* Resources */

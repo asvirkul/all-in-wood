@@ -20,6 +20,24 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
+        const showcaseSection = document.querySelector('.showcase-wrapper');
+      const megamenus = document.querySelectorAll('.megamenu');
+
+      function updateMegamenuBackground() {
+        const scrollY = window.scrollY;
+        const triggerY = showcaseSection.offsetTop + showcaseSection.offsetHeight;
+
+        if (scrollY > triggerY) {
+          megamenus.forEach(menu => menu.classList.add('dark-bg'));
+        } else {
+          megamenus.forEach(menu => menu.classList.remove('dark-bg'));
+        }
+      }
+
+      window.addEventListener('scroll', updateMegamenuBackground);
+      window.addEventListener('load', updateMegamenuBackground);
+
+
         var elem = document.querySelector('.grid');
         var msnry = new Masonry( elem, {
  
@@ -33,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
          gutter: 5
         }); 
 
-            document.querySelectorAll('a[href]').forEach(link => {
+        document.querySelectorAll('a[href]').forEach(link => {
         const url = link.getAttribute('href');
       
         if (!url || url.startsWith('#') || url.startsWith('http')) return;
