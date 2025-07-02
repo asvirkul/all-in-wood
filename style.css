@@ -1938,5 +1938,41 @@ form button:hover svg {
   max-width: 70%;
   margin: 0 auto;
 }
-
+.sponsors-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  max-width: 90%;
+  margin: 0 auto;
+  align-items: center;
+}
+.sponsors-title {
+  font-family: 'Great Vibes';
+  font-size: 80px;
+  padding: 50px 0;
+  display: block;
+  color: #fff;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.sponsors-wrapper {
+  background-color: #000;
+}
+.sponsors-content > div {
+  width: 18%;
+  margin-bottom: 20px;
+}
+.sponsors-content img {
+  width: 70%;
+  transition: all;
+  transition-duration: .5s;
+  filter: grayscale();
+  margin: 0 auto;
+}
+.sponsors-content img:hover {
+  filter: none;
+}
+.sponsors-content div:last-of-type img {
+  border-radius: 10px;
+}
 /* Contact */
