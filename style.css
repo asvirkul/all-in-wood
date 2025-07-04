@@ -2132,6 +2132,65 @@ form button:hover svg {
 
 /* Media */
 @media all and (max-width:1200px) {
+  .contact-title-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contact-form-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-form-content form {
+    width: 90%;
+    margin-bottom: 40px;
+  }
+   .contact-title-text h2, .contact-title-text p {
+    width: 100%;
+   }
+  .contact-form-content {
+    padding: 0 20px;
+  }
+    .collections-content {
+    display: flex;
+    justify-content: center;
+  }
+  .contact-form-img {
+    display: none;
+  }
+  .contact-form-content {
+    margin-bottom: 40px;
+  }
+  .address-content {
+    flex-direction: column-reverse;
+  }
+  #map {
+    width: 100%;
+  }
+  .contact-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .map-wrapper {
+    width: 100% !important;
+    margin: 0 auto;
+  }
+  .address-content {
+    max-width: 90%;
+  }
+  .address-info h2 {
+    font-size: 30px;
+  }
+  .address-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  .address-info > div:last-child {
+    text-align: right;
+  }
   .column-content article {
     margin: 40px auto !important;
   }
@@ -2317,6 +2376,22 @@ form button:hover svg {
   }
 }
 @media all and (max-width:768px) {
+  .address-title {
+    max-width: 90%;
+  }
+  .address-info > div {
+    width: 50%;
+  }
+  .address-title {
+    font-size: 30px;
+  }
+  .form-text h2 {
+    font-size: 40px !important; 
+  }
+  .contact-title h2 {
+    font-size: 80px;
+    text-align: center;
+  }
   .accordion-header img {
     width: 50px;
   }
@@ -2345,10 +2420,7 @@ form button:hover svg {
   .footer-menu {
     flex-wrap: wrap;
   }
-  .collections-content {
-    display: flex;
-    justify-content: center;
-  }
+
     .footer-content ul {
     max-height: 0;
     overflow: hidden;
@@ -2399,6 +2471,13 @@ form button:hover svg {
 @media all and (max-width:650px) {
     .contacts-content form input::placeholder, .contacts-content form textarea::placeholder {
     font-size: 12px !important;
+  }
+  .address-title h2 {
+    font-size: 25px;
+    text-align: center;
+  }
+  .address-info h2 {
+    font-size: 25px;
   }
   .collections-wrapper .legacy-description h2 {
     font-size: 35px;
@@ -2454,9 +2533,17 @@ form button:hover svg {
   .footer-content .footer-menu h2,.footer-lookbook a {
     font-size: 20px !important;
   }
-  
+  .contact-form-content form h2 {
+    font-size: 30px !important;
+  }
+  .form-text p {
+    line-height: 30px;
+  }
 }
 @media all and (max-width:500px) {
+  .contact-title h2 {
+    font-size: 50px;
+  }
   .pros-wrapper {
     height: 1000px;
   }
@@ -2495,5 +2582,27 @@ form button:hover svg {
   }
 
 }
-
+@media all and (max-width:450px) {
+  .address-info {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .address-info h2 {
+    text-align: center !important; 
+  }
+  .address-info div {
+    text-align: center;
+  }
+  .address-info > div {
+    width: 90%;
+  }
+  .address-title h2 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .contact-title-text p {
+    text-align: center;
+  }
+}
 /* Media */

@@ -41,7 +41,28 @@
             <div class="header-content bottom" id="sticky-bar">
     
                 <ul class="menu" id="main-header">
-                    <li class="group perspective menu-item"><a href="index.html" class="flip-link">home</a></li>
+                    <div class="mobile-nav">
+                        <div class="burger-menu" id="burger-toggle">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewBox="0,0,256,256">
+                                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(9.84615,9.84615)"><path d="M0,4v2h26v-2zM0,12v2h26v-2zM0,20v2h26v-2z"></path></g></g>
+                            </svg>
+                        </div>
+                        <div class="mobile-logo">
+                            <a href="index.html" class="logo-link">
+                                 <span class="logo-text">ALLINWOOD</span>
+                            </a>
+                        </div>
+                        <div class="mobile-icons">
+                            <div>
+                                <img src="images/facebook-logo.svg" alt="">
+                            </div>
+                            <div>
+                                <img src="images/instagram-logo.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <li class="group perspective menu-item"><a href="#" class="flip-link">home</a></li>
                     <li class="group perspective menu-item"><a href="gallery.html" class="flip-link">project gallery</a></li>
                     <li class="group perspective menu-item"><a href="resources.html" class="flip-link">resources</a></li>
                     <li class="group perspective menu-item"><a href="#" class="flip-link">find a dealer</a></li>
@@ -63,7 +84,7 @@
                             </div>
                           </div>
                         </div>
-                      </li>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -117,15 +138,21 @@
         </div>
         <div class="address-content">
             <div class="address-info">
-                <h2>Phone Number</h2>
                 <div>
-                    <p><a href="tel:+38061123123">+61234567899</a></p>
-                    <a href="tel:+38061123123">+61234567899</a>
+                    
+                    <h2>Phone Number</h2>
+                    <div>
+                        <p><a href="tel:+38061123123">+61234567899</a></p>
+                        <a href="tel:+38061123123">+61234567899</a>
+                    </div>
                 </div>
-                <h2>Address</h2>
                 <div>
-                    <a href="#">All In Wood Office, USA</a>
-                    <a href="#">All In Wood Office, USA</a>
+
+                    <h2>Address</h2>
+                    <div>
+                        <a href="#">All In Wood Office, USA</a>
+                        <a href="#">All In Wood Office, USA</a>
+                    </div>
                 </div>
             </div>
             <div class="map-wrapper">
@@ -176,6 +203,42 @@
         <!-- Footer -->
         
     </main>
+
+
+    <div class="mobile-menu-wrapper" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-top">
+                <div class="mobile-menu-logo">
+                        <a href="index.html" class="logo-link">
+                            <img src="images/logo.png" alt="">
+                        </a>
+                </div>
+                <div class="mobile-menu-close close-btn" id="closeMenu">
+                    <p>close <svg xmlns="http://www.w3.org/2000/svg" id="closeIcon" width="50" height="50" fill="#fff" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg></p>
+                </div>
+            </div>
+            <ul class="menu mobile-menu">
+                <li class="menu-item"><a href="#" class="flip-link">home</a></li>
+                <li class="menu-item"><a href="gallery.html" class="flip-link">project gallery</a></li>
+                <li class="menu-item"><a href="resources.html" class="flip-link">resources</a></li>
+                <li class="menu-item"><a href="#" class="flip-link">find a dealer</a></li>
+                <li class="menu-item has-submenu">
+                    <a href="#" class="submenu-toggle">Collections</a>
+                    <ul class="submenu">
+                    <li><a href="#">Wood</a></li>
+                    <li><a href="#">Stone</a></li>
+                    <li><a href="#">Metal</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="contact.html" class="flip-link">contact</a></li>
+            </ul>
+            <div class="mobile-menu-links">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+            </div>
+    </div>
+        
+    </div>
 
     <!-- animation -->
     <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
