@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         gsap.to(fromEl, {
         scrollTrigger: {
           trigger: ".single-gallery-slider-wrapper",
-          start: "center center",
+           start: "center center",
           end: "bottom center",
           scrub: 0.5,
         },
