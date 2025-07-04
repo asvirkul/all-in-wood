@@ -171,7 +171,7 @@ document.querySelectorAll('.accordion-item').forEach(item => {
     });
   });
 
-  const showcaseSection = document.querySelector('.showcase-wrapper');
+const showcaseSection = document.querySelector('.showcase-wrapper');
 const megamenus = document.querySelectorAll('.megamenu');
 
 function updateMegamenuBackground() {
