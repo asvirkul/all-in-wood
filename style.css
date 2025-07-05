@@ -1249,21 +1249,22 @@ footer img {
     text-shadow: 2px 0 60px currentColor;
     margin-top: 20px;
   }
-  
-  .gallery-content .grid {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    width: 100vw;
-    gap: 12px;
+  .grid-sizer {
+    width: 33.3333%;
+    box-sizing: border-box;
   }
-  
+    .gallery-content .grid {
+    width: 99%;
+    margin: 0 auto;
+}
   .grid-item {
-    width: 32.8%;
+    width: calc(33.33% - 10px);
+    margin: 5px;
     overflow: hidden;
     position: relative;
-    margin-bottom: 5px;
+    margin-bottom: 10px !important;
     transition: filter 0.8s ease, opacity 0.8s ease;
+    box-sizing: border-box;
   }
   .grid-text {
     position: absolute;
@@ -1273,7 +1274,7 @@ footer img {
     font-family: 'Neue Montreal Bold', serif;
     text-transform: uppercase;
     font-size: 13px;
-    z-index: 20;
+    z-index: 2;
     padding: 10px 15px;
   }
   .grid-text h2:first-of-type {
@@ -2012,7 +2013,7 @@ form button:hover svg {
   position: static;
   transform: unset;
   opacity: 1;
-  height: 60px;
+  height: 70px;
 }
 .mobile-menu-links {
   position: absolute;
@@ -2131,11 +2132,56 @@ form button:hover svg {
 /* Mobile Menu */
 
 /* Media */
+@media all and (max-width:1400px) {
+  .resources-content {
+    max-width: 1200px;
+  }
+}
 @media all and (max-width:1200px) {
+  .logo-text {
+    padding-left: 0;
+  }
+  .gallery-wrapper .gallery-title {
+    padding-bottom: 100px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .gallery-title h2 {
+    font-size: 67px;
+  }
+  .gallery-wrapper .grid-sizer {
+    width: calc(50% - 50px);
+    display: none;
+  }
+  .gallery-content .grid {
+    width: 90%;
+    margin: 0 auto;
+}
+ .grid:hover .grid-item {
+    opacity: 1;
+    filter: unset !important;
+    scale: unset !important;
+  }
+  .gallery-wrapper .grid-item {
+    width: calc(50% - 10px);
+    padding-inline: 0 10px;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+   }
+   .grid-item:hover img:hover, .grid-item:hover {
+    transform: unset !important;
+    scale: unset !important;
+    filter: unset !important;
+   }
   .contact-title-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  .resources-content article {
+    width: 90% !important;
+    margin: 0 auto;
+    margin-bottom: 20px;
   }
   .contact-form-content {
     flex-direction: column;
@@ -2289,6 +2335,19 @@ form button:hover svg {
 
 
 @media all and (max-width:850px) {
+  .gallery-title h2 {
+    font-size: 50px;
+  }
+  .gallery-title p {
+    margin-top: 20px;
+    line-height: 30px;
+  }
+  .gallery-wrapper .grid-item {
+    width: 100%;
+  }
+  .resources-title {
+    width: 90%;
+  }
   .accordion-body form > div {
     flex-wrap: wrap;
     gap: 0;
@@ -2376,6 +2435,9 @@ form button:hover svg {
   }
 }
 @media all and (max-width:768px) {
+  .gallery-title p {
+        text-shadow: 2px 0 78px currentColor;
+  }
   .address-title {
     max-width: 90%;
   }
@@ -2469,6 +2531,9 @@ form button:hover svg {
   }
 }
 @media all and (max-width:650px) {
+    .gallery-title h2 {
+      font-size: 45px;
+    }
     .contacts-content form input::placeholder, .contacts-content form textarea::placeholder {
     font-size: 12px !important;
   }
@@ -2508,6 +2573,12 @@ form button:hover svg {
   }
 }
 @media all and (max-width:600px) {
+  .resources-title p {
+    font-size: 14px;
+  } 
+  .resources-title h2 {
+    font-size: 40px;
+  }
   .contacts-title {
     width: 90%;
   }
@@ -2541,6 +2612,7 @@ form button:hover svg {
   }
 }
 @media all and (max-width:500px) {
+  
   .contact-title h2 {
     font-size: 50px;
   }
@@ -2583,6 +2655,14 @@ form button:hover svg {
 
 }
 @media all and (max-width:450px) {
+  .gallery-title h2 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  .gallery-title p {
+    font-size: 13px;
+    line-height: 28px;
+  }
   .address-info {
     flex-direction: column;
     text-align: center;

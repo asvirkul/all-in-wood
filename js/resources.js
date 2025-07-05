@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
 
         window.addEventListener('load', () => {
@@ -18,101 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.getElementById('page-transition').style.display = 'none';
                 }
             });
-        });
+        })
 
-
-        var msnry = new Masonry( '.grid', {
-        itemSelector: '.grid-item',
-         itemSelector: '.grid-item',
-    columnWidth: '.grid-sizer',
-    percentPosition: true,
-         
-        }); 
-
-        document.querySelectorAll('a[href]').forEach(link => {
-        const url = link.getAttribute('href');
-      
-        if (!url || url.startsWith('#') || url.startsWith('http')) return;
-      
-        link.addEventListener('click', e => {
-          e.preventDefault();
-          gsap.set('#page-transition', { display: 'block', pointerEvents: 'auto' });
-      
-          gsap.to('#page-transition', {
-            opacity: 1,
-            duration: 0.6,
-            ease: 'power2.inOut',
-            onComplete: () => {
-              window.location.href = url;
-            }
-          });
-        });
-      });
-
-        document.querySelectorAll('.has-megamenu').forEach(item => {
-    const megamenu = item.querySelector('.megamenu');
-
-    gsap.set(megamenu, {
-      autoAlpha: 0,
-      y: -20,
-      display: 'none',
-      pointerEvents: 'none'
-    });
-
-    let showTween, hideTween;
-
-    item.addEventListener('mouseenter', () => {
-      if (hideTween) hideTween.kill();
-
-      gsap.set(megamenu, { display: 'block', pointerEvents: 'auto' });
-      showTween = gsap.to(megamenu, {
-        duration: 0.4,
-        autoAlpha: 1,
-        y: 0,
-        ease: 'power2.out'
-      });
-    });
-
-    item.addEventListener('mouseleave', () => {
-      if (showTween) showTween.kill();
-
-      hideTween = gsap.to(megamenu, {
-        duration: 0.3,
-        autoAlpha: 0,
-        y: -20,
-        ease: 'power2.in',
-        onComplete: () => {
-          gsap.set(megamenu, { display: 'none', pointerEvents: 'none' });
-        }
-      });
-    });
-  });
-
-
-    const stickyBar = document.getElementById("sticky-bar");
-  let lastScrollY = window.scrollY;
-
-  window.addEventListener("scroll", () => {
-    const currentY = window.scrollY;
-
-    // Фиксируем шапку при прокрутке
-    if (currentY > 300) {
-      stickyBar.classList.add("fixed");
-    } else {
-      stickyBar.classList.remove("fixed");
-    }
-
-    // Добавляем/убираем тень плавно
-    if (currentY < 30) {
-      stickyBar.classList.add("no-shadow");
-    } else {
-      stickyBar.classList.remove("no-shadow");
-    }
-
-    lastScrollY = currentY;
-  });
-
-const burger = document.getElementById('burger-toggle');
+    const burger = document.getElementById('burger-toggle');
 const menuWrapper = document.getElementById('mobileMenu');
 const menuItems = menuWrapper.querySelectorAll('.menu-item');
 
@@ -209,6 +116,28 @@ closeBtn.addEventListener('click', () => {
       });
     });
   }
-  
+
+    const stickyBar = document.getElementById("sticky-bar");
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener("scroll", () => {
+    const currentY = window.scrollY;
+
+    // Фиксируем шапку при прокрутке
+    if (currentY > 300) {
+      stickyBar.classList.add("fixed");
+    } else {
+      stickyBar.classList.remove("fixed");
+    }
+
+    // Добавляем/убираем тень плавно
+    if (currentY < 30) {
+      stickyBar.classList.add("no-shadow");
+    } else {
+      stickyBar.classList.remove("no-shadow");
+    }
+
+    lastScrollY = currentY;
+  });
 
 });
