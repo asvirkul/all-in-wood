@@ -172,4 +172,43 @@ closeBtn.addEventListener('click', () => {
     });
   }
 
+    document.querySelectorAll('.has-megamenu').forEach(item => {
+    const megamenu = item.querySelector('.megamenu');
+
+    gsap.set(megamenu, {
+      autoAlpha: 0,
+      y: -20,
+      display: 'none',
+      pointerEvents: 'none'
+    });
+
+    let showTween, hideTween;
+
+    item.addEventListener('mouseenter', () => {
+      if (hideTween) hideTween.kill();
+
+      gsap.set(megamenu, { display: 'block', pointerEvents: 'auto' });
+      showTween = gsap.to(megamenu, {
+        duration: 0.4,
+        autoAlpha: 1,
+        y: 0,
+        ease: 'power2.out'
+      });
+    });
+
+    item.addEventListener('mouseleave', () => {
+      if (showTween) showTween.kill();
+
+      hideTween = gsap.to(megamenu, {
+        duration: 0.3,
+        autoAlpha: 0,
+        y: -20,
+        ease: 'power2.in',
+        onComplete: () => {
+          gsap.set(megamenu, { display: 'none', pointerEvents: 'none' });
+        }
+      });
+    });
+  });
+
 });

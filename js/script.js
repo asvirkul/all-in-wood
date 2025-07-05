@@ -204,6 +204,10 @@ if (window.innerWidth >= 768) {
 
   document.querySelectorAll('.has-megamenu').forEach(item => {
     const megamenu = item.querySelector('.megamenu');
+    megamenu.addEventListener('wheel', (e) => {
+  e.preventDefault();
+}, { passive: false });
+
 
     gsap.set(megamenu, {
       autoAlpha: 0,
@@ -215,6 +219,7 @@ if (window.innerWidth >= 768) {
     let showTween, hideTween;
 
     item.addEventListener('mouseenter', () => {
+       
       if (hideTween) hideTween.kill();
 
       gsap.set(megamenu, { display: 'block', pointerEvents: 'auto' });
@@ -227,6 +232,7 @@ if (window.innerWidth >= 768) {
     });
 
     item.addEventListener('mouseleave', () => {
+
       if (showTween) showTween.kill();
 
       hideTween = gsap.to(megamenu, {
@@ -240,6 +246,10 @@ if (window.innerWidth >= 768) {
       });
     });
   });
+
+
+
+
 
 const stickyBar = document.getElementById("sticky-bar");
 let lastScrollY = window.scrollY;
