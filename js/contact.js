@@ -185,6 +185,7 @@ closeBtn.addEventListener('click', () => {
     let showTween, hideTween;
 
     item.addEventListener('mouseenter', () => {
+      
       if (hideTween) hideTween.kill();
 
       gsap.set(megamenu, { display: 'block', pointerEvents: 'auto' });

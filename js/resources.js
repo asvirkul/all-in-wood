@@ -139,5 +139,6 @@ closeBtn.addEventListener('click', () => {
 
     lastScrollY = currentY;
   });
+  
 
 });

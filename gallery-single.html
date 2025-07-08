@@ -17,9 +17,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Gallery -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css"
+    />
 
     <title>Document</title>
 </head>
+
 <body class="add">
     <div id="page-transition"></div>
 
@@ -39,7 +45,28 @@
             <div class="header-content bottom" id="sticky-bar">
     
                 <ul class="menu" id="main-header">
-                    <li class="group perspective menu-item"><a href="index.html" class="flip-link">home</a></li>
+                    <div class="mobile-nav">
+                        <div class="burger-menu" id="burger-toggle">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewBox="0,0,256,256">
+                                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(9.84615,9.84615)"><path d="M0,4v2h26v-2zM0,12v2h26v-2zM0,20v2h26v-2z"></path></g></g>
+                            </svg>
+                        </div>
+                        <div class="mobile-logo">
+                            <a href="index.html" class="logo-link">
+                                 <span class="logo-text">ALLINWOOD</span>
+                            </a>
+                        </div>
+                        <div class="mobile-icons">
+                            <div>
+                                <img src="images/facebook-logo.svg" alt="">
+                            </div>
+                            <div>
+                                <img src="images/instagram-logo.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <li class="group perspective menu-item"><a href="#" class="flip-link">home</a></li>
                     <li class="group perspective menu-item"><a href="gallery.html" class="flip-link">project gallery</a></li>
                     <li class="group perspective menu-item"><a href="resources.html" class="flip-link">resources</a></li>
                     <li class="group perspective menu-item"><a href="#" class="flip-link">find a dealer</a></li>
@@ -61,7 +88,7 @@
                             </div>
                           </div>
                         </div>
-                      </li>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -76,23 +103,22 @@
             <div class="single-gallery-info">
 
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere incidunt iusto modi veniam ea! Nesciunt sapiente atque ipsa autem corporis!</p>
-                    <div class="info-img-wrapper">
-                        <div class="info-img">
-                            <a href="#">
-                              <img src="images/house.jpg" alt="">  
+                    <div class="info-img-wrapper" >
+                        <div id="lightgallery">
+                            <a href="images/house.jpg" data-lg-size="1406-936">
+                                <img src="images/house.jpg" />
                             </a>
-                            
-                        </div>
-                        <div class="info-img">
-                            <a href="#">
-                              <img src="images/house.jpg" alt="">  
+                            <a href="images/house.jpg" data-lg-size="1406-936">
+                                <img src="images/house.jpg" />
                             </a>
-                        </div>
-                        <div class="info-img">
-                             <a href="#">
-                              <img src="images/house.jpg" alt="">  
+                            <a href="images/house.jpg" data-lg-size="1406-936">
+                                <img src="images/house.jpg" />
+                            </a>
+                            <a href="images/house.jpg" data-lg-size="1406-936">
+                                <img src="images/house.jpg" />
                             </a>
                         </div>
+
                     </div>
             </div>
            <div class="single-gallery-current">
@@ -114,6 +140,7 @@
                 <div class="single-gallery-name">
                     <h2>greyheron blazdress</h2>
                 </div>
+                <div class="placeholder"></div>
                 <div class="single-gallery-slider">
                     <div class="img-slider">
                         <img src="images/house.jpg" alt="">
@@ -133,8 +160,8 @@
     </section>
     <!-- Single Gallery -->
 
-    <!-- Footer -->
-        <footer>
+        <!-- Footer -->
+         <footer>
             <div class="footer-content">
                 <div class="footer-menu">
                     <div class="footer-pages">
@@ -174,10 +201,51 @@
         
     </main>
 
+    <div class="mobile-menu-wrapper" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-top">
+                <div class="mobile-menu-logo">
+                        <a href="index.html" class="logo-link">
+                            <img src="images/logo.png" alt="">
+                        </a>
+                </div>
+                <div class="mobile-menu-close close-btn" id="closeMenu">
+                    <p>close <svg xmlns="http://www.w3.org/2000/svg" id="closeIcon" width="50" height="50" fill="#fff" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg></p>
+                </div>
+            </div>
+            <ul class="menu mobile-menu">
+                <li class="menu-item"><a href="#" class="flip-link">home</a></li>
+                <li class="menu-item"><a href="gallery.html" class="flip-link">project gallery</a></li>
+                <li class="menu-item"><a href="resources.html" class="flip-link">resources</a></li>
+                <li class="menu-item"><a href="#" class="flip-link">find a dealer</a></li>
+                <li class="menu-item has-submenu">
+                    <a href="#" class="submenu-toggle">Collections</a>
+                    <ul class="submenu">
+                    <li><a href="#">Wood</a></li>
+                    <li><a href="#">Stone</a></li>
+                    <li><a href="#">Metal</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="contact.html" class="flip-link">contact</a></li>
+            </ul>
+            <div class="mobile-menu-links">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+            </div>
+        </div>
+        
+    </div>
+        
+    </main>
+
     <!-- animation -->
     <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/simple-parallax-js@5.6.2/dist/simpleParallax.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
